@@ -1,0 +1,17 @@
+<h1> <%= @cat.name %> </h1>
+
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+
+    </tr>
+    <% [:color, :birth_date, :age, :sex, :description].each do |cat_attr| %>
+        <tr>
+            <td> <%= cat_attr %> </td>
+            <td> <%= @cat.send(cat_attr) %> </td>
+        </tr>
+        <%end%>
+</table>
+
+<a href="<%= cats_url(@cat)%>"> Back to all cats!</a>
