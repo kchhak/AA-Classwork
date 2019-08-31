@@ -1,0 +1,19 @@
+<h1> <%=@band.name%> </h1>
+
+<% if @band.albums.empty? %>
+  <p> No albums yet. Help us improve our library! </p>
+<%else%>
+  <div>
+    <table>
+      <tr><th>Albums</th></tr>
+      <%@band.albums.each do |album|%>
+        <td> <a href="<%=album_url(album)%>"> <%=album.title%> </a> </td>
+        <%end%>
+    </table>
+  </div>
+  </br>
+<%end%>
+
+<a href="<%=new_band_album_url(@band)%>"> Submit an album? </a>
+</br>
+<a href="<%=bands_url%>"> Back to all bands? </a>

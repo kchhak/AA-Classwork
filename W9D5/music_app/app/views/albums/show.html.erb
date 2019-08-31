@@ -1,0 +1,44 @@
+<h1> <%=@album.title%> </h1>
+
+<div>
+  <a href="<%=edit_album_url(@album)%>">Fix it! | </a>
+  <a href="<%=new_album_track_url(@album)%>">Add a track!</a>
+</div>
+</br>
+<div>
+  Album Info:
+  <table> 
+      <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+      </tr>
+      <% [:band_name, :year, :album_type].each do |attr_name| %>
+        <tr>
+          <td><%= attr_name %></td>
+          <td><%= @album.send(attr_name) %></td>
+        </tr>
+      <% end %>
+  </table>
+  </br>
+  Track Info:
+  <table>
+    <tr>
+      <th> </th>
+      <th>Song Title</th>
+    </tr>
+    <%@album.tracks.each do |track|%>
+      <tr>
+        <td><%=track.ord%></td>
+        <td><a href="<%=track_url(track)%>"><%=track.title%></a></td>
+      </tr>
+    <%end%>
+  </table>
+</div>
+</br>
+  <form action="<%= album_url %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Delele this album?">
+  </form>
+</br>
+
+<a href="<%=band_url(@album.band.id)%>">back to <%=@album.band_name%>?</a>

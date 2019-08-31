@@ -1,0 +1,12 @@
+<h1><%=@track.title%></h1>
+<a href></a>
+<div>
+  <%=@track.lyrics%>
+</div>
+</br>
+  <form action="<%= track_url %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Delele this track?">
+  </form>
+</br>
+<a href="<%=album_url(@track.album.id)%>">back to <%=@track.album.title%>?</a>

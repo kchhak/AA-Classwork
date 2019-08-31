@@ -1,0 +1,39 @@
+<h1> Submit an album </h1>
+
+<form action="<%=band_albums_url%>" method="post">
+
+  <label>Band
+    <select name="album[band_id]">
+      <option> ---- </option>
+      <%@bands.each do |band|%>
+        <option value="<%=band.id%>"> <%= band.name %></option>
+      <%end%>
+    </select>
+  </label>
+
+  <label>Title 
+    <input type="text" name="album[title]"/>
+  </label>
+
+  <label>Year
+    <input type="number" name="album[year]"/>
+  </label>
+
+  <label>Album Type 
+    <input
+      type="radio"
+      name="album[album_type]"
+      value="Studio"
+      id="studio_album" />
+    <label for="studio_album">Studio</label>
+    <input
+      type="radio"
+      name="album[album_type]"
+      value="Live"
+      id="live_album" />
+    <label for="live_album">Live</label>
+  </label>
+
+  <input type="submit" value="Submit the album">
+
+</form>
