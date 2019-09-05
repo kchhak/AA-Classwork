@@ -1,0 +1,18 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<h3><%= @post.url %></h3>
+
+<form action="<%= comments_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Leave a comment:
+    <input type="textarea" name="comment[content]">
+  </label>
+  <input type="submit" value="Submit">
+</form>
+
+</br>
+<form action="<%= post_url(@post) %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete post">
+</form>
