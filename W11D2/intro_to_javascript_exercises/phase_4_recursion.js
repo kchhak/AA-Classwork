@@ -128,15 +128,16 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 
-// function subSets(arr) {
-//   if (arr.length === 0) {
-//     return [arr];
-//   }
-//   let prevSet = subSets(arr.slice(0,arr.length-2))
-//   return prevSet.concat(prevSet.map(function(el){
-//     return el.concat(arr[arr.length-1])
-//   }));
-// }
+function subsets(arr) {
+  if (arr.length === 0) {
+    return [[]];
+  }
+  const first = arr[0];
+  const nextSet = subsets(arr.slice(1));
+
+  let combo = nextSet.map(el => [first].concat(el));
+  return nextSet.concat(combo);
+}
 
 // [] => [[]]
 // [1] => [[], [1]]
