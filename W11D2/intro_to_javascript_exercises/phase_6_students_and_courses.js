@@ -21,7 +21,7 @@ Student.prototype.courseLoad = function() {
   this.courses.forEach(function(course){
     let dept = course.department;
     deptHash[dept] = deptHash[dept] || 0;
-    deptHash[dept] += course.credits
+    deptHash[dept] += course.credits;
   });
 
   return deptHash;
@@ -53,14 +53,19 @@ Course.prototype.addStudent = function(student) {
 }
 
 Course.prototype.conflictsWith = function(course){
+  let conflict = false;
+
   if (this.block !== course.block) {
     return false;
   }
+
   this.days.forEach(function(day){
     if (course.days.includes(day)){
-      return true;
+      conflict = true;
     }
   });
+
+  return conflict;
 }
 
 let student1 = new Student('Bob', 'Bobberson');
