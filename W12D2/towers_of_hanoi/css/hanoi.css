@@ -1,0 +1,32 @@
+ul {
+  border-bottom: 5px solid black; 
+  width: 190px;
+  margin: 30px auto;
+  list-style: none;
+  cursor: pointer;
+}
+
+ul:hover{
+  border-bottom-color: blue;
+}
+
+.hanoi {
+  display: flex;
+  width: 900px;
+  height: 500px;
+}
+
+.disk-1{
+  width: 90px;
+  background-color: blue;
+}
+
+.disk-2{
+  width: 120px;
+  background-color: green;
+}
+
+.disk-3{
+  width: 150px;
+  background-color: red;
+}

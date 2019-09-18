@@ -1,0 +1,21 @@
+/* PHASE 10: Posts */
+.posts {
+  margin-top: 20px;
+  display: flex;
+  width: 94%;
+  background-color: rgb(230, 225, 225);
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.posts > article > a {
+  display: flex;
+}
+
+.posts > article > h2 {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
