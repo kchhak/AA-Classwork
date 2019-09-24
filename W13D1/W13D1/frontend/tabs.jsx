@@ -20,7 +20,7 @@ export default class Tabs extends React.Component {
           {this.props.tabs.map((el, index) => {
             return (
             <li key={index}
-            class = {this.state.selected === index ? 'active' : ''}
+            className = {this.state.selected === index ? 'active' : ''}
             onClick={() => this.selectTab(index)}>
               <span>{el.title}</span>
             </li>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './clock';
 import Tabs from './tabs';
+import Weather from './weather';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -15,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return (
       <div>
         <Clock />
-        <div class="doodads">
+        <Weather/>
+        <div className="doodads">
         <Tabs tabs={taberet} />
         </div>
       </div>
