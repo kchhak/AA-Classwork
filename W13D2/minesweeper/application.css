@@ -1,0 +1,111 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+
+.tile {
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  border: 3px solid gray;
+  border-style: outset;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.tile:hover{
+  cursor: pointer;
+  background-color: rgb(238, 237, 237);
+}
+
+.tile.revealed{
+  border-style: inset;
+  background-color: rgb(238, 237, 237)
+}
+
+.row{
+  display: flex;
+}
+
+.grid{
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.modal-screen {
+ position: fixed; 
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ z-index: 2;
+ background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-form {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  background-color: white;
+  z-index: 3;
+  width: 350px;
+  height: 250px;
+  padding: 15px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.modal-form p {
+  display: block;
+  width: 100%;
+}
+
+.modal-form button {
+  background-color: gray;
+  border: 1px solid black;
+  height: 30px;
+  margin-top: 20px;
+}
