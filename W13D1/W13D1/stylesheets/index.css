@@ -1,0 +1,82 @@
+h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Major Mono Display';
+}
+
+#clock {
+    font-family: 'Major Mono Display';
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+#clock > #things {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    height: 94px;
+    font-size: 28px;
+    padding: 15px;
+}
+
+#clock > #things > #time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#clock > #things > #date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.doodads {
+  display: flex;
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#tab-titles {
+  display: flex;
+  width: 198px;
+}
+
+#tab-titles > li {
+  width: 65px;
+  text-align: center;
+  padding-top: 4px; 
+  border: 1px solid black;
+  border-top-right-radius: 10px; 
+  border-top-left-radius: 10px;
+  font-size: 18px;
+}
+
+#tab-titles > li:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#tab-titles > li.active{
+  border-bottom: 1px solid lightblue;
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+#tab-content {
+  background-color: lightblue;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  width: 196px;
+  height: 192px;
+  justify-content: center;
+  align-items: center;
+}
